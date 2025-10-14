@@ -1,21 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mwawrzen</title>
     <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="./src/index.css">
-</head>
-
-<body>
-    <main>
-        <h1 id="main--h1"></h1>
-        <p id="main--p">by mwawrzen &copy; 2020</p>
-    </main>
-
-    <script src="./src/index.js"></script>
-</body>
-
+    <title>Mike Wawrzen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="menu">
+      <nav class="menu__nav">
+        <ul>
+          <li><a href="#about_me">about_me</a></li>
+          <li><a href="#my_projects">my_projects</a></li>
+          <li><a href="#contact_me">contact_me</a></li>
+        </ul>
+      </nav>
+      <div class="menu__icon">
+        <div class="menu__icon__bar"></div>
+        <div class="menu__icon__bar"></div>
+        <div class="menu__icon__bar"></div>
+      </div>
+    </section>
+    <div id="start" class="container">
+      <header class="hero">
+        <section class="hero__text">
+          <h1 class="heading">Hi_I'm <span class="accent">Mike</span></h1>
+          <p class="paragraph">Web developer ☺️</p>
+        </section>
+        <section class="image">
+          <img class="image__img" src="./assets/ja.png" alt="Photo of me">
+        </section>
+      </header>
+    </div>
+    <div id="about_me" class="container">
+      <div class="img__container">
+        <img src="./assets/about.jpg" alt="About me section photo - mountians">
+      </div>
+        <p>Georgeus layouts and efficient data displaying are my second name. I'm&nbsp;deeply interested in&nbsp;meaningful design and well-designed UX which are my&nbsp;main goals to&nbsp;better understanding people's comfort using any web applications.</p>
+    </div>
+    <div id="my_projects" class="container">
+      <h2>my<span class="accent">_</span>projects</h2>
+      <section class="project">
+        <header>
+          <h3>Todo<span class="accent">roo</span></h3>
+          <div class="img__container">
+            <img src="./assets/todoroo.png" alt="Todoroo app image">
+          </div>
+        </header>
+        <div class="content">
+          <p class="description">Simple to-do app created with React. It uses a&nbsp;local storage to store all tasks in your browser</p>
+          <section class="technologies">
+            <div class="technology">
+              <img src="./assets/react_icon.png" alt="React icon">
+              <p>React</p>
+            </div>
+            <div class="technology">
+              <img src="./assets/ts_icon.png" alt="Typescript icon">
+              <p>Typescript</p>
+            </div>
+            <div class="technology">
+              <img src="./assets/tailwind_icon.png" alt="TailwindCSS icon">
+              <p>TailwindCSS</p>
+            </div>
+          </section>
+          <section class="links">
+            <a class="github_link" href="https://github.com/mwawrzen/todoroo" target="_blank">Check out repository</a>
+            <a class="demo_link" href="https://mwawrzen.github.io/todoroo/" target="_blank">Take a look on a working demo</a>
+          </section>
+        </div>
+      </section>
+      <section class="project">
+        <header>
+          <h3>Skyscrape<span class="accent">roo</span></h3>
+          <div class="img__container">
+            <img src="./assets/skyscraperoo.png" alt="Skyscraperoo app image">
+          </div>
+        </header>
+        <div class="content">
+          <p class="description">Game created for school purposes. It is a&nbsp;javascriptified version of a&nbsp;popular atari game&nbsp;-&nbsp;Skyscraper</p>
+          <section class="technologies">
+            <div class="technology">
+              <img src="./assets/html_icon.png" alt="HTML icon">
+              <p>HTML Canvas</p>
+            </div>
+            <div class="technology">
+              <img src="./assets/js_icon.png" alt="JavaScript icon">
+              <p>JavaScript</p>
+            </div>
+          </section>
+          <section class="links">
+            <a class="github_link" href="https://github.com/mwawrzen/skyscraperoo" target="_blank">Check out repository</a>
+            <a class="demo_link" href="https://mwawrzen.github.io/skyscraperoo/" target="_blank">Take a look on a working demo</a>
+          </section>
+        </div>
+      </section>
+      <section class="project">
+        <header>
+          <h3>Web<span class="accent">_</span>things</h3>
+          <div class="img__container">
+            <img src="./assets/web_things.png" alt="Todoroo app image">
+          </div>
+        </header>
+        <div class="content">
+          <p class="description">Simple to-do app created with React. It uses a&nbsp;local storage to store all tasks in your browser.</p>
+          <section class="technologies">
+            <div class="technology">
+              <img src="./assets/html_icon.png" alt="React icon">
+              <p>HTML</p>
+            </div>
+            <div class="technology">
+              <img src="./assets/sass_icon.png" alt="Sass icon">
+              <p>Sass</p>
+            </div>
+            <div class="technology">
+              <img src="./assets/js_icon.png" alt="Javascript icon">
+              <p>JavaScript</p>
+            </div>
+          </section>
+          <section class="links">
+            <a class="github_link" href="https://github.com/mwawrzen/web_things" target="_blank">Check out repository</a>
+            <a class="demo_link" href="https://mwawrzen.github.io/web_things/" target="_blank">Take a look on a working demo</a>
+          </section>
+        </div>
+      </section>
+    </div>
+    <div id="contact_me" class="container">
+      <section class="box">
+        <p>Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications. Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications. Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications. Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications. Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications. Georgeus layouts and efficient data displaying are my second name. I'm deeply interested in meaningful design and well-designed UX which are my main goals to better understanding people's comfort using any web applications.</p>
+      </section>
+    </div>
+    <div class="cursor"></div>
+    <div class="to-top">
+      <a href="#">
+        <img src="./assets/arrow-up.svg" alt="Scroll to top button">
+      </a>
+    </div>
+  </body>
 </html>
