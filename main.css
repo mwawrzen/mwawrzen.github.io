@@ -234,7 +234,7 @@ body {
           position: absolute;
           z-index: 1;
           top: 50%;
-          left: -.4vw;
+          left: -10%;
           transform: translateY( -50% );
           display: block;
           width: 1vw;
@@ -285,7 +285,7 @@ body {
 }
 
 #my_projects {
-  width: 100vw;
+  width: 100%;
   padding: 6rem 0;
 
   h2 {
@@ -299,10 +299,6 @@ body {
     gap: 4vw;
     margin-top: max( 4vw, 2rem );
     padding: 2rem 4rem;
-
-    /* &:nth-child( even ) {
-      background: #141414;
-    } */
 
     h3 {
       margin-bottom: max( 1vw, 1rem );
@@ -335,7 +331,7 @@ body {
       .technologies {
         display: flex;
         gap: 1vw;
-        margin: clamp( 1.2rem, 2vw, 2rem ) 0;
+        margin: clamp( 1.2rem, 4vw, 2.8rem ) 0;
         .technology {
           display: flex;
           flex-direction: column;
@@ -352,39 +348,54 @@ body {
       .links {
         a {
           display: block;
-          width: 50%;
           font-size: clamp( .8rem, 1.4vw, 1rem );
-          margin: 1vw 0;
+          margin-bottom: .6vw;
           padding: .4vw 1vw;
           color: var( --color-secondary );
           text-decoration: none;
           cursor: pointer;
           transition: .2s;
-          /* position: relative; */
-          /* overflow: hidden; */
+          border-left: 0 solid var( --color-accent );
 
           &:hover {
-            border-left: 20px solid var( --color-accent )
+            border-left-width: 20px
           }
+        }
+      }
+    }
 
-          /* &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            display: block;
-            content: "";
-            background: var( --color-accent );
-            width: 100%;
-            height: 100%;
-            border-radius: 0 2vw 2vw 0;
-            transform: translateX( -110% );
-            transition: .4s
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+      background-color: #1d1d1d;
+
+      h3 {
+        text-align: right
+      }
+
+      .content {
+
+        .description {
+          text-align: right
+        }
+
+        .technologies {
+          display: flex;
+          justify-content: end
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          a {
+            text-align: right;
+            border-left: 0;
+            border-right: 0 solid var( --color-accent );
+
+            &:hover {
+              border-right-width: 20px
+            }
           }
-
-          &:hover::before {
-            transform: translateX( 0 )
-          } */
         }
       }
     }
