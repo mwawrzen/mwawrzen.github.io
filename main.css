@@ -23,7 +23,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  padding-top: 4rem;
   background: var( --color-primary );
   color: var( --color-secondary );
   font-family: var( --font-primary )
@@ -133,6 +132,7 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     background: var( --color-accent );
+    /* background: #1a1a1a; */
     animation: 3s infinite img;
   }
 }
@@ -256,31 +256,55 @@ body {
   }
 }
 
+#start {
+  display: grid;
+  place-items: center
+}
+
 #about_me {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 
-  .img__container {
-    height: max( 30vw, 180px );
-    aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 2rem;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2vw;
+    text-align: center
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      animation: 6s infinite about_me_img;
+  p {
+    margin-top: 1rem;
+    flex: 1;
+    font-size: clamp( .8rem, 2vw, 1.4rem );
+    text-indent: 4vw
+  }
+
+  .decorator-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 500px;
+
+    .decorator {
+      width: clamp( 40px, 8vw, 80px );
+      height: clamp( 40px, 8vw, 80px );
+      border-radius: 50%;
+      background: var( --color-accent );
+
+      &:nth-child(odd) {
+        transform: scale(1.2);
+        align-self: end
+      }
     }
   }
-  p {
-    flex: 1;
-    font-size: clamp( .8rem, 2vw, 1.8rem );
-  }
-  .box {
-    flex: 1
+
+  .column {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw */
   }
 }
 
@@ -349,7 +373,7 @@ body {
         a {
           display: block;
           font-size: clamp( .8rem, 1.4vw, 1rem );
-          margin-bottom: .6vw;
+          margin-bottom: max(.6vw, 1rem);
           padding: .4vw 1vw;
           color: var( --color-secondary );
           text-decoration: none;
@@ -397,6 +421,67 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+
+#contact_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem
+  }
+
+  .link-group {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      color: var( --color-secondary );
+      text-decoration: none;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        color: var( --color-accent );
+
+        img {
+          opacity: 1
+        }
+      }
+
+      img {
+        width: clamp(100px, 10vw, 120px);
+        opacity: .6;
+        pointer-events: none
+      }
+
+      &:first-child img {
+        animation: 3s infinite contact_me_img_1
+      }
+
+      &:nth-child(2) img {
+        animation: 3s infinite contact_me_img_2
+      }
+
+      &:last-child img {
+        animation: 3s infinite contact_me_img_3
+      }
+
+      p {
+        font-size: clamp(1.4rem, 2.8vw, 2rem);
+        pointer-events: none
       }
     }
   }
@@ -463,12 +548,18 @@ body {
     width: 100vw;
     padding: 2rem;
 
-    .img__container {
-      display: none;
-    }
     p {
       font-size: clamp( 1.2rem, 2vw, 1.8rem );
       text-align: center
+    }
+
+    .decorator-box {
+      flex-direction: row;
+      height: 80px;
+
+      .decorator:nth-child(even) {
+
+      }
     }
   }
 
@@ -484,6 +575,12 @@ body {
           }
         }
       }
+    }
+  }
+
+  #contact_me {
+    .link-group {
+      flex-direction: column
     }
   }
 }
@@ -507,4 +604,22 @@ body {
   10%, 30% { transform: scale( 1 ) rotateZ( 0 ) }
   40%, 70% { transform: scale( 1.2 ) rotateZ( -2deg ) }
   100% { transform: scale( 1.2 ) rotateZ( 2deg ) }
+}
+
+@keyframes contact_me_img_1 {
+  0% { transform: scale( 1 ) }
+  20%, 40% { transform: scale( .9 ) }
+  100% { transform: scale( 1 ) }
+}
+
+@keyframes contact_me_img_2 {
+  0% { transform: scale( 1 ) }
+  40%, 60% { transform: scale( .9 ) }
+  100% { transform: scale( 1 ) }
+}
+
+@keyframes contact_me_img_3 {
+  0% { transform: scale( 1 ) }
+  60%, 80% { transform: scale( .9 ) }
+  100% { transform: scale( 1 ) }
 }
